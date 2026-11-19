@@ -12,15 +12,15 @@ for file in listdir(input_path):
         print(file_path)
         folder_path= output_path+file.split(".pdf")[0]+"//"
         i=1
-        page = 1
+        page = 566
         if not path.exists(folder_path):
             makedirs(folder_path)
         with Image(filename = file_path, resolution = 200) as pdfimage:
             for img in pdfimage.sequence:
-                if i in [52,75,134,145,178,179]:
+                if i in [32, 91, 126, 127, 184]:
                     i+=1
                     continue
-                if i >= 18:
+                if i >= 1:
                     image = Image(image = img)
                     image.save(filename = folder_path + str(page) + "." + outputFileExtentino)
                     page += 1
