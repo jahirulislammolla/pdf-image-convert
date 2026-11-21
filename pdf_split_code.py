@@ -2,11 +2,11 @@
 import pymupdf
 from pathlib import Path
 
-input_pdf = r"F:\pdf\Davidson's_Principles_and_Practice_of_Medicine_25eTRUE_1.pdf"
+input_pdf = r"D:\www\pdf-image-convert\split_output\DC Dutta Obstetrics 11th OCR.pdf"
 output_dir = Path("split_output")
 output_dir.mkdir(exist_ok=True)
 
-pages_per_file = 200
+pages_per_file = 300
 
 with pymupdf.open(input_pdf) as pdf:
     total_pages = len(pdf)
